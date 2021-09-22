@@ -17,3 +17,8 @@ public class Main {
         System.out.println((long) bucket.filterBallsByColor(Color.BLUE).size());
     }
 }
+
+// javac -d bin -sourcepath src src/com/task9/Main.java
+
+// inside /bin jar cfe a.jar com.task9.Main .
+// java -jar a.jar
