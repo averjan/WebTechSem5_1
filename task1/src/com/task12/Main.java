@@ -5,7 +5,7 @@ import com.task12.book.ProgrammerBook;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         Book book = new Book("The captain's daughter", "Pushkin", 3);
         Book book2 = new Book("The captain's daughter", "Pushkin", 3);
         Book book3 = new Book("War and Piece", "Tolstoy", 10);
@@ -15,6 +15,9 @@ public class Main {
         System.out.println(book.equals(book3));
         System.out.println(book.toString());
         System.out.println(book.hashCode());
+
+        Book test = book.clone();
+        System.out.println(test.toString());
 
         ProgrammerBook pb = new ProgrammerBook("The captain's daughter", "Pushkin", 3, "Spanish", 5);
         ProgrammerBook pb2 = new ProgrammerBook("The captain's daughter", "Pushkin", 3, "Spanish", 5);

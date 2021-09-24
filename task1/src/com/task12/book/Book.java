@@ -1,6 +1,6 @@
 package com.task12.book;
 
-public class Book {
+public class Book implements Cloneable {
     private String title;
     private String author;
     private int price;
@@ -41,5 +41,10 @@ public class Book {
     @Override
     public String toString() {
         return String.format("%s by %s, %d$, %d edition", this.title, this.author, this.price, edition);
+    }
+
+    @Override
+    public Book clone() throws CloneNotSupportedException {
+        return (Book) super.clone();
     }
 }
