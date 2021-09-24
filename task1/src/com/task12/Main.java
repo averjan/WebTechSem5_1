@@ -1,6 +1,7 @@
 package com.task12;
 
 import com.task12.book.Book;
+import com.task12.book.ProgrammerBook;
 
 public class Main {
 
@@ -14,5 +15,15 @@ public class Main {
         System.out.println(book.equals(book3));
         System.out.println(book.toString());
         System.out.println(book.hashCode());
+
+        ProgrammerBook pb = new ProgrammerBook("The captain's daughter", "Pushkin", 3, "Spanish", 5);
+        ProgrammerBook pb2 = new ProgrammerBook("The captain's daughter", "Pushkin", 3, "Spanish", 5);
+        ProgrammerBook pb3 = new ProgrammerBook("War and Piece", "Tolstoy", 10, "Russian", 4);
+        System.out.println(pb.equals(pb));
+        System.out.println(pb.equals(12));
+        System.out.println(pb.equals(pb2));
+        System.out.println(pb.equals(pb3));
+        System.out.println(pb.toString());
+        System.out.println(pb.hashCode());
     }
 }
