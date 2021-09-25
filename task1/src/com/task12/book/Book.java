@@ -2,7 +2,9 @@ package com.task12.book;
 
 import com.task12.standarts.ISBN;
 
-public class Book implements Cloneable, Comparable<Book> {
+import java.util.Comparator;
+
+public class Book implements Cloneable, Comparable<Book>{
     private String title;
     private String author;
     private int price;
@@ -14,6 +16,18 @@ public class Book implements Cloneable, Comparable<Book> {
         this.author = author;
         this.price = price;
         this.isbn = new ISBN(isbn);
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public String getAuthor() {
+        return this.author;
+    }
+
+    public int getPrice() {
+        return this.price;
     }
 
     @Override
@@ -61,6 +75,10 @@ public class Book implements Cloneable, Comparable<Book> {
 
     @Override
     public int compareTo(Book o) {
+        if (o == null) {
+            return 1;
+        }
+
         return ISBN.compare(this.isbn, o.isbn);
     }
 }
