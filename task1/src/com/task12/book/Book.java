@@ -70,7 +70,7 @@ public class Book implements Cloneable, Comparable<Book>{
 
     @Override
     public Book clone() throws CloneNotSupportedException {
-        return (Book) super.clone();
+        return new Book(this.title, this.author, this.isbn.getIsbn(), this.price);
     }
 
     @Override

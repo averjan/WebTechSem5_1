@@ -15,6 +15,10 @@ public class ISBN {
         }
     }
 
+    public String getIsbn() {
+        return this.isbn;
+    }
+
     public static boolean isValid(String s) {
         if (s == null) {
             return false;
