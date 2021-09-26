@@ -29,8 +29,6 @@ h
 8src/com/task12/book/comparators/BookPriceComparator.java,2\b\2bd721d90cfb5ec70597c12efa057cab29caf9f4
 i
 9src/com/task12/book/comparators/BookAuthorComparator.java,2\2\22037c206c1c568ebfeed878e007b6a2b76b45a7
-G
-src/com/task9/Main.java,1\1\114357d3107cc80dd539e6f8b559c13c2e19a3cd
 M
 src/com/task12/book/Book.java,b\2\b289f76c1ac314f388c403ab9d28daea0c989343
 R

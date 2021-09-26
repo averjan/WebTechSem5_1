@@ -19,7 +19,8 @@ public class Main {
     }
 }
 
-// javac -d bin -sourcepath src src/com/task9/Main.java
+// javac -d binTask9 -sourcepath src src/com/task9/Main.java
 
-// inside /bin jar cfe a.jar com.task9.Main .
+// cd /binTask9
+// jar cfe a.jar com.task9.Main .
 // java -jar a.jar
