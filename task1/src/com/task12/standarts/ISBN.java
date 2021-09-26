@@ -1,12 +1,8 @@
 package com.task12.standarts;
 
-import java.util.Arrays;
-import java.util.Comparator;
+public record ISBN(String isbn) {
 
-public class ISBN {
-    private final String isbn;
-
-    public ISBN(String isbn) throws IllegalArgumentException {
+    public ISBN(String isbn) {
         if (isValid(isbn)) {
             this.isbn = isbn;
         }

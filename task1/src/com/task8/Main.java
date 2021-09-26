@@ -22,7 +22,7 @@ public class Main {
 
             System.out.printf("%d(from b) ", bEl);
         }
-
+        
         while (i < a.length) {
             System.out.printf("%d ", a[i]);
             i++;

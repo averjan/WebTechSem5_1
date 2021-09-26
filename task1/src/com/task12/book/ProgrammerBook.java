@@ -3,10 +3,11 @@ package com.task12.book;
 import java.util.Objects;
 
 public class ProgrammerBook extends Book {
-    private String language;
-    private int level;
+    private final String language;
+    private final int level;
 
-    public ProgrammerBook(String title, String author, String isbn, int price, String language, int level) {
+    public ProgrammerBook(String title, String author, String isbn,
+                          int price, String language, int level) {
         super(title, author, isbn, price);
         this.language = language;
         this.level = level;
@@ -18,10 +19,10 @@ public class ProgrammerBook extends Book {
             return true;
         }
 
-        if (anotherObject instanceof ProgrammerBook) {
-            return super.equals(anotherObject)
-                    && (this.language.equals(((ProgrammerBook) anotherObject).language))
-                    && (this.level == ((ProgrammerBook) anotherObject).level);
+        if (anotherObject instanceof ProgrammerBook pbObject) {
+            return super.equals(pbObject)
+                    && (this.language.equals(pbObject.language)
+                    && (this.level == pbObject.level));
         }
 
         return false;
@@ -34,6 +35,7 @@ public class ProgrammerBook extends Book {
 
     @Override
     public String toString() {
-        return String.format("%s, language - %s, level - %d", super.toString(), this.language, this.level);
+        return String.format("%s, language - %s, level - %d", super.toString(),
+                                this.language, this.level);
     }
 }

@@ -2,7 +2,10 @@ package com.task3;
 
 public class Main {
     public static void main(String[] args) {
-        calcFunction(2, 10, 0.5);
+        double a = 2;
+        double b = 10;
+        double h = 0.5;
+        calcFunction(a, b, h);
     }
 
     private static void calcFunction(double a, double b, double h) {

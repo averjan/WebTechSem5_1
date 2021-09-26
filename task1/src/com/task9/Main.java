@@ -14,7 +14,8 @@ public class Main {
         bucket.add(new Ball(1, Color.BLUE));
 
         System.out.println(bucket.itemsWeight());
-        System.out.println((long) bucket.filterBallsByColor(Color.BLUE).size());
+        System.out.println(
+                (long) bucket.filterBallsByColor(Color.BLUE).size());
     }
 }
 

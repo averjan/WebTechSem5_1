@@ -1,17 +1,17 @@
 package com.task5;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Main {
-
-    private static final int n = 5;
 
     public static void main(String[] args) {
         int[] a = new int[] {2, 3, 12, 4, 15, 5, 0, -2, -4, 40};
         System.out.println(findRemoveNumber(a));
     }
 
-    private static int findRemoveNumber(int @NotNull [] a) {
+    private static int findRemoveNumber(int[] a) {
+        if (a == null) {
+            return -1;
+        }
+
         int[] d = new int[a.length];
         for (int i = 0; i < a.length; i++) {
             d[i] = 1;
