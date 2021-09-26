@@ -1,5 +1,7 @@
 package com.task12.book;
 
+import java.util.Objects;
+
 public class ProgrammerBook extends Book {
     private String language;
     private int level;
@@ -27,11 +29,7 @@ public class ProgrammerBook extends Book {
 
     @Override
     public int hashCode() {
-        int prime = 31;
-        int result = super.hashCode();
-        result = prime * result + ((this.language == null) ? 0 : this.language.hashCode());
-        result = prime * result + this.level;
-        return result;
+        return Objects.hash(super.hashCode(), this.language, this.level);
     }
 
     @Override

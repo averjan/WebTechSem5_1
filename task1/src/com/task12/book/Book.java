@@ -3,6 +3,7 @@ package com.task12.book;
 import com.task12.standarts.ISBN;
 
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Book implements Cloneable, Comparable<Book>{
     private String title;
@@ -48,14 +49,7 @@ public class Book implements Cloneable, Comparable<Book>{
 
     @Override
     public int hashCode() {
-        int prime = 31;
-        int result = 1;
-        result = prime * result + ((this.title == null) ? 0 : this.title.hashCode());
-        result = prime * result + ((this.author == null) ? 0 : this.author.hashCode());
-        result = prime * result + price;
-        result = prime * result + edition;
-        result = prime * result + this.isbn.hashCode();
-        return result;
+        return Objects.hash(this.title, this.author, this.price, edition, this.isbn);
     }
 
     @Override
